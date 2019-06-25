@@ -18,6 +18,10 @@ extern string_container * string_container_init(const char *src,size_t length);
 
 extern void string_container_deinit(string_container *str);
 
+extern string_container * string_container_copy(const string_container *str);
+
+extern string_container * string_container_append(const string_container *str,const string_container *other_str);
+
 #ifdef __cplusplus
 }
 #endif
