@@ -1,5 +1,5 @@
-#ifndef STRING_ENCODER
-#define STRING_ENCODER
+#ifndef STRING_ENCODER_H
+#define STRING_ENCODER_H
 
 #include <iconv.h>
 #include "string_container.h"

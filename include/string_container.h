@@ -1,5 +1,5 @@
-#ifndef STRING_CONTAINER
-#define STRING_CONTAINER
+#ifndef STRING_CONTAINER_H
+#define STRING_CONTAINER_H
 
 #include <string.h>
 
