@@ -12,9 +12,9 @@ include_directories(
     ${PROJECT_INCLUDE_PATH}
 )
 
-# library output path
+# library output path (all:LIBRARY_OUTPUT_PATH;share:CMAKE_LIBRARY_OUTPUT_DIRECTORY;static:CMAKE_ARCHIVE_OUTPUT_DIRECTORY)
 set(LIB_OUTPUT_PATH ../lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIB_OUTPUT_PATH})
+set(LIBRARY_OUTPUT_PATH ${LIB_OUTPUT_PATH})
 
 # library src file root path
 set(LIB_SRC_PATH ../src)
