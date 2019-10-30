@@ -54,6 +54,17 @@
         "vector": "cpp",
         "__hash_table": "cpp",
         "__split_buffer": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "__node_handle": "cpp",
+        "__tree": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "deque": "cpp",
+        "optional": "cpp",
+        "fstream": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "sstream": "cpp",
+        "stack": "cpp"
     }
 }
