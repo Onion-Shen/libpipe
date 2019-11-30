@@ -1,6 +1,8 @@
 #ifndef UTIL_DEF_H
 #define UTIL_DEF_H
 
+// #define Util_Debug
+
 #include <exception>
 
 #define throwError(msg) throw std::logic_error(msg)

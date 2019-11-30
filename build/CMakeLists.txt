@@ -47,6 +47,8 @@ ${LIB_SRC_PATH}/json/JSONParser.cpp
 ${LIB_SRC_PATH}/json/JSONToken.cpp 
 ${LIB_SRC_PATH}/util/LexerReader.cpp 
 ${LIB_SRC_PATH}/util/ZlibWrapper.cpp 
+${LIB_SRC_PATH}/util/Crypto.cpp 
+${LIB_SRC_PATH}/util/FileSystem.cpp 
 ${LIB_SRC_PATH}/xml/XMLDocument.cpp 
 ${LIB_SRC_PATH}/xml/XMLLexer.cpp 
 ${LIB_SRC_PATH}/xml/XMLParser.cpp 
@@ -60,6 +62,10 @@ ${LIB_SRC_PATH}/net/BIOSocket.cpp
 ${LIB_SRC_PATH}/net/SocketConfig.cpp 
 ${LIB_SRC_PATH}/net/TCPSocket.cpp 
 ${LIB_SRC_PATH}/net/UDPSocket.cpp 
+${LIB_SRC_PATH}/HTTP/HTTPClient.cpp 
+${LIB_SRC_PATH}/HTTP/HTTPServer.cpp 
+${LIB_SRC_PATH}/HTTP/URL.cpp 
+${LIB_SRC_PATH}/WebSocket/WSServer.cpp 
 )
 
 # create library (STATIC/SHARED)
