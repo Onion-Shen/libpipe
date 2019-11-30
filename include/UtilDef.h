@@ -5,6 +5,12 @@
 
 #define throwError(msg) throw std::logic_error(msg)
 
+enum class HTTPMessageParseState : int
+{
+    Line = 0,
+    Header,
+    Body
+};
 namespace Util
 {
     using byte = unsigned char;

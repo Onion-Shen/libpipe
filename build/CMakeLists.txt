@@ -30,10 +30,15 @@ ${LIB_SRC_PATH}/json/JSONLexer.cpp
 ${LIB_SRC_PATH}/json/JSONParser.cpp 
 ${LIB_SRC_PATH}/json/JSONToken.cpp 
 ${LIB_SRC_PATH}/util/LexerReader.cpp 
+${LIB_SRC_PATH}/util/ZlibWrapper.cpp 
 ${LIB_SRC_PATH}/xml/XMLDocument.cpp 
 ${LIB_SRC_PATH}/xml/XMLLexer.cpp 
 ${LIB_SRC_PATH}/xml/XMLParser.cpp 
 ${LIB_SRC_PATH}/xml/XMLTok.cpp 
+${LIB_SRC_PATH}/HTTPMsgParser/HTTPRecvMsgParser.cpp 
+${LIB_SRC_PATH}/HTTPMsgParser/HTTPReqMsgParser.cpp 
+${LIB_SRC_PATH}/HTTPMsgParser/HTTPRequest.cpp 
+${LIB_SRC_PATH}/HTTPMsgParser/HTTPResponse.cpp
 )
 
 # create library (STATIC/SHARED)
@@ -41,4 +46,7 @@ set(LIB_NAME pipe)
 add_library(${LIB_NAME} SHARED ${LIB_SRC})
 
 # link the library that the project is needed
+# libiconv
 target_link_libraries(${LIB_NAME} iconv)
+# libz
+target_link_libraries(${LIB_NAME} z)
