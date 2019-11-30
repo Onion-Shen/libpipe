@@ -9,10 +9,26 @@ set(CMAKE_CXX_FLAGS "-std=c++14")
 
 # library header file include path
 set(PROJECT_INCLUDE_PATH ../include)
+# openssl header file path on mac
+set(OPENSSL_INCLUDE_PATH /usr/local/opt/openssl/include)
 
 # head files
 include_directories(
-    ${PROJECT_INCLUDE_PATH}
+    ${PROJECT_INCLUDE_PATH} 
+    ${OPENSSL_INCLUDE_PATH}
+)
+
+# openssl lib path on mac
+set(OPENSSL_LIB_PATH /usr/local/opt/openssl/lib)
+# add library path to linker
+link_directories(
+    ${OPENSSL_LIB_PATH}
+)
+
+# library files that need to be linked
+link_libraries(
+    ${OPENSSL_LIB_PATH}/libcrypto.a 
+    ${OPENSSL_LIB_PATH}/libssl.a
 )
 
 # library output path (all:LIBRARY_OUTPUT_PATH;share:CMAKE_LIBRARY_OUTPUT_DIRECTORY;static:CMAKE_ARCHIVE_OUTPUT_DIRECTORY)
@@ -38,7 +54,12 @@ ${LIB_SRC_PATH}/xml/XMLTok.cpp
 ${LIB_SRC_PATH}/HTTPMsgParser/HTTPRecvMsgParser.cpp 
 ${LIB_SRC_PATH}/HTTPMsgParser/HTTPReqMsgParser.cpp 
 ${LIB_SRC_PATH}/HTTPMsgParser/HTTPRequest.cpp 
-${LIB_SRC_PATH}/HTTPMsgParser/HTTPResponse.cpp
+${LIB_SRC_PATH}/HTTPMsgParser/HTTPResponse.cpp 
+${LIB_SRC_PATH}/net/BasicSocket.cpp 
+${LIB_SRC_PATH}/net/BIOSocket.cpp 
+${LIB_SRC_PATH}/net/SocketConfig.cpp 
+${LIB_SRC_PATH}/net/TCPSocket.cpp 
+${LIB_SRC_PATH}/net/UDPSocket.cpp 
 )
 
 # create library (STATIC/SHARED)
